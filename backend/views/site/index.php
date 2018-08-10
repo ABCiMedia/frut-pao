@@ -3,8 +3,8 @@
 /* @var $this yii\web\View */
 use \yii\widgets\LinkPager;
 
-/*$this->title = 'Dashboard';
-$this->params['breadcrumbs'][] = $this->title;*/
+$this->title = 'Dashboard';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-index">
      <!-- Visão geral do site -->

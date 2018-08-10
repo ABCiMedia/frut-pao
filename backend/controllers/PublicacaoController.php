@@ -80,7 +80,7 @@ class PublicacaoController extends Controller
             //$model->save();
             $images= UploadedFile::getInstance($model, 'image');
             $ImgName = $images->baseName. '.' .$images->extension;
-            $images->saveAs(Yii::getAlias('@ImgPath'). '/' .$ImgName);
+            $images->saveAs(Yii::getAlias('@webroot/upload'). '/' .$ImgName);
             $model->image = $ImgName;
             $model->save();
 
@@ -107,7 +107,7 @@ class PublicacaoController extends Controller
             //$model->save();
             $images= UploadedFile::getInstance($model, 'image');
             $ImgName = $images->baseName. '.' .$images->extension;
-            $images->saveAs(Yii::getAlias('@ImgPath'). '/' .$ImgName);
+            $images->saveAs(Yii::getAlias('@webroot/upload'). '/' .$ImgName);
             $model->image = $ImgName;
             $model->save();
 

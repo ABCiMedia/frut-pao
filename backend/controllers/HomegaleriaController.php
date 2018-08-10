@@ -80,7 +80,7 @@ class HomegaleriaController extends Controller
             //$model->save();
             $image= UploadedFile::getInstance($model, 'images');
             $ImgName = $image->baseName. '.' .$image->extension;
-            $image->saveAs(Yii::getAlias('@ImgPath'). '/' .$ImgName);
+            $image->saveAs(Yii::getAlias('@webroot/upload'). '/' .$ImgName);
             $model->images = $ImgName;
             $model->save();
 
@@ -107,7 +107,7 @@ class HomegaleriaController extends Controller
             //$model->save();
             $image= UploadedFile::getInstance($model, 'images');
             $ImgName = $image->baseName. '.' .$image->extension;
-            $image->saveAs(Yii::getAlias('@ImgPath'). '/' .$ImgName);
+            $image->saveAs(Yii::getAlias('@webroot/upload'). '/' .$ImgName);
             $model->images = $ImgName;
             $model->save();
             

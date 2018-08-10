@@ -80,7 +80,7 @@ class PromocaogaleriaController extends Controller
             //$model->save();
             $images= UploadedFile::getInstance($model, 'imagem');
             $ImgName = $images->baseName. '.' .$images->extension;
-            $images->saveAs(Yii::getAlias('@ImgPath'). '/' .$ImgName);
+            $images->saveAs(Yii::getAlias('@webroot/upload'). '/' .$ImgName);
             $model->imagem = $ImgName;
             $model->save();
 
@@ -108,7 +108,7 @@ class PromocaogaleriaController extends Controller
             $images= UploadedFile::getInstance($model, 'imagem');
             if($images && $model->validate()){
                 $ImgName = $images->baseName. '.' .$images->extension;
-                $images->saveAs(Yii::getAlias('@ImgPath'). '/' .$ImgName);
+                $images->saveAs(Yii::getAlias('@webroot/upload'). '/' .$ImgName);
                 $model->imagem = $ImgName;
                 $model->save();
                 
